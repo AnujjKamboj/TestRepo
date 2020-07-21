@@ -33,4 +33,16 @@ interface ApiInterface {
         @Part image: MultipartBody.Part?
     ): Call<SignUpWrapper>
 
+    @Multipart
+    @PATCH("user")
+    fun update(
+        @Part("name") address: RequestBody,
+        @Part("area") address_type: RequestBody,
+        @Part("phone") city: RequestBody,
+        @Part("password") country: RequestBody,
+        @Part("state") country_code: RequestBody,
+        @Part("city") email: RequestBody,
+        @Part image: MultipartBody.Part?
+    ): Call<SignUpWrapper>
+
 }

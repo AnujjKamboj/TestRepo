@@ -158,7 +158,7 @@ class UpdateUserActivity : BaseActivity(), BottomSheetImageCallBack.ImageCallBac
         val state: RequestBody = RequestBody.create(MultipartBody.FORM, getTextValue(stateET) ?: "")
         val city: RequestBody = RequestBody.create(MultipartBody.FORM, getTextValue(cityET) ?: "")
 
-        return apiInterface.register(
+        return apiInterface.update(
             name,
             area,
             phone,
